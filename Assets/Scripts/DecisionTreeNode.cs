@@ -61,6 +61,8 @@ public static class NavigationManager
         CurrentNode = CurrentNode.LeftNode;
 
         CurrentNode.Load();
+
+        mainController.PlayerHasMovedToAnotherNode();
     }
 
     public static void MoveToNextThanksToCard(GameObject newTracker, bool isLeft = true)
@@ -87,6 +89,8 @@ public static class NavigationManager
         CurrentNode.Load();
 
         NavigationManager.MoveAvatarFromTracker(CurrentNode.ReferredTrackingMetaData);
+
+        mainController.PlayerHasMovedToAnotherNode();
     }
 
 
@@ -107,6 +111,8 @@ public static class NavigationManager
         CurrentNode.Load();
 
         NavigationManager.IstantiateAvatarToTracker(CurrentNode.ReferredTrackingMetaData);
+
+        mainController.PlayerHasMovedToAnotherNode();
     }
 
 

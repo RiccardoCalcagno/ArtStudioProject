@@ -53,6 +53,11 @@ public class MainController : MonoBehaviour
 
 
 
+    public void PlayerHasMovedToAnotherNode()
+    {
+        var nextNode = NavigationManager.CurrentNode;
+    }
+
 
     // Start is called before the first frame update
     void Start()
