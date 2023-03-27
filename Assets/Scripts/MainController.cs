@@ -115,7 +115,7 @@ public class MainController : MonoBehaviour
             .AddChoiceNodes(new NodeRenderedContent("Eat and drink", "Avatar"), new NodeRenderedContent("Return to notify your herd", "Avatar"));
 
 
-        var c121 = choice4.Item1.AddSingleNextNode(new NodeRenderedContent("You remained on high alert, always scanning the horizon for any sign of danger. You knew that you had to be careful if your herd wanted to survive. Later this night, the sound of gunshots rang out across the savannah. You knew that the poachers had come and that they were after your herd.", "Avatar"));
+        var c121 = choice4.Item1.AddSingleNextNode(new NodeRenderedContent("You wake up your herd and start to run as fast as you could, trying to outrun the poachers' bullets. The poacher chase you but they are slow and tall meanwhile you're quick and small. In front there are 2 path.", "Avatar"));
         var c122 = choice4.Item2.AddSingleNextNode(new NodeRenderedContent("You fight the poachers. Those giraffes headshot you and you die instantly. BE 2: Resistance", "Avatar"));
         var c211 = choice5.Item1.AddSingleNextNode(new NodeRenderedContent("The night came and you got lost, unable to find your way back to the herd. You cannot protect yourself yet. You died of lion predation. BE 5: Out of the herd", "Avatar"));
         var c212 = choice5.Item2.AddSingleNextNode(new NodeRenderedContent("Your herd decide to move to the new habitat you have found.Your herd decide to move to the new habitat you have found.", "Avatar"));
@@ -138,7 +138,7 @@ public class MainController : MonoBehaviour
             .AddChoiceNodes(new NodeRenderedContent("Left", "Avatar"), new NodeRenderedContent("Right", "Avatar"));
 
         var choice9 = c2121.AddSingleNextNode(new NodeRenderedContent("What to do now?", "Avatar"))
-            .AddChoiceNodes(new NodeRenderedContent("Left", "Avatar"), new NodeRenderedContent("Right", "Avatar"));
+            .AddChoiceNodes(new NodeRenderedContent("Continue to eat the bitter leaves", "Avatar"), new NodeRenderedContent("Leave to find another habitat", "Avatar"));
 
 
         var c12121 = choice8.Item1.AddSingleNextNode(new NodeRenderedContent("You got rid of the poachers, but you were also too weak to move anymore. You lost your consciousness. After you wake up, you realized you were in a giraffe's place. He has no bad intention, though. He's a veterinary that saved your life. After you were cured, he sent you to a zoo, where you spent the rest of your life. You have endless food and water. You do not need to worry about predators anymore. Everyday a lot of giraffes, young and old, come to see you. You brought profit to the zoo. You are loved by all these giraffes. Once in a while, in the midnight, you will think of your herd, and your savannah. Is what you have now worth giving up freedom? That is a question. HE: Zoo animal", "Avatar"));
