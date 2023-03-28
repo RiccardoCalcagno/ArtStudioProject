@@ -84,16 +84,16 @@ public class MainController : MonoBehaviour
 
     public void CreateDecisionTree()
     {
-        var start11 = NavigationManager.GiveMeRootToStartFrom(new NodeRenderedContent("This is one day in a life of a human living in the heart of the African savannah together with his herd.", "Avatar"))
-            .AddSingleNextNode(new NodeRenderedContent("X heard a strange noise. Looking up, you saw a group of giraffes driving trucks and bulldozers through the grassland, tearing down trees.", "Avatar"));
+        var start11 = NavigationManager.GiveMeRootToStartFrom(new NodeRenderedContent("This is one day in a life of a human living in the heart of the African savannah together with his herd.", "Savana"))
+            .AddSingleNextNode(new NodeRenderedContent("X heard a strange noise. Looking up, you saw a group of giraffes driving trucks and bulldozers through the grassland, tearing down trees.", "Savana"));
 
-        var choice1 = start11.AddSingleNextNode(new NodeRenderedContent("Leave to search for another habitat, or stay here?", "Avatar"))
-            .AddChoiceNodes(new NodeRenderedContent("Leave", "Avatar"), new NodeRenderedContent("Stay", "Avatar"));
+        var choice1 = start11.AddSingleNextNode(new NodeRenderedContent("Leave to search for another habitat, or stay here?", ""))
+            .AddChoiceNodes(new NodeRenderedContent("Leave", "Giraffe"), new NodeRenderedContent("Stay", "Savana"));
         
  
 
-        var c1 = choice1.Item1.AddSingleNextNode(new NodeRenderedContent("Your herd and you successfully found a new habitat within the savannah, with enough trees and water. This had been a long journey. Now you really need to take a break.", "Avatar"));
-        var c2 = choice1.Item2.AddSingleNextNode(new NodeRenderedContent("Over time, X noticed that the grassland was shrinking, and the trees were disappearing. It's becoming increasingly hard for your herd to find enough food and water to survive.", "Avatar"));
+        var c1 = choice1.Item1.AddSingleNextNode(new NodeRenderedContent("Your herd and you successfully found a new habitat within the savannah, with enough trees and water. This had been a long journey. Now you really need to take a break.", "Savana"));
+        var c2 = choice1.Item2.AddSingleNextNode(new NodeRenderedContent("Over time, X noticed that the grassland was shrinking, and the trees were disappearing. It's becoming increasingly hard for your herd to find enough food and water to survive.", "Giraffe"));
 
        var choice2 = c1.AddSingleNextNode(new NodeRenderedContent("Go to sleep?", "Avatar"))
             .AddChoiceNodes(new NodeRenderedContent("Yes", "Avatar"), new NodeRenderedContent("No", "Avatar"));
@@ -147,7 +147,7 @@ public class MainController : MonoBehaviour
         var c21212 = choice9.Item2.AddSingleNextNode(new NodeRenderedContent("You and your herd encountered poachers on the way. While wildlife trade is forbidden by law, many giraffes still would take the risk hunting and poaching human for the value of their skin and meat. You tried to run, but shortage of food and water left you limited energy to do that. You died. BE 8: Greed", "Avatar"));
 
 
-        var choice10 = c121221.AddSingleNextNode(new NodeRenderedContent("What to do now?", "Avatar"))
+        var choice10 = c21212.AddSingleNextNode(new NodeRenderedContent("What to do now?", "Avatar"))
             .AddChoiceNodes(new NodeRenderedContent("Continue to eat the bitter leaves", "Avatar"), new NodeRenderedContent("Leave to find another habitat", "Avatar"));
 
         var c121221 = choice10.Item1.AddSingleNextNode(new NodeRenderedContent("Stay low. you are surrounded by giraffes and they capture you. BE 3: Fall at the last hurdle", "Avatar"));

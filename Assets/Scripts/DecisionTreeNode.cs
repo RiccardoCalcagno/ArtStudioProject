@@ -350,7 +350,7 @@ public class DecisionTreeNode
             }
         }
 
-        if(RequireUserInteraction == false)
+        if(RequireUserInteraction == false && IsLeftOrRightChoiceNode == false)
         {
             NavigationManager.mainController.StartCoroutine(TimerThenGoToNext());
         }

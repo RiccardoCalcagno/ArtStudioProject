@@ -148,7 +148,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6503628}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.096}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -240,7 +240,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 66861975}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.096}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -569,13 +569,13 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: Tracker3
+  mTrackableName: Sample3
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/SecondDataBase.xml
-  mAspectRatio: 1.7266
+  mDataSetPath: Vuforia/FirstSample.xml
+  mAspectRatio: 1.55945
   mImageTargetType: 0
   mWidth: 0.06
-  mHeight: 0.103596
+  mHeight: 0.093567
   mRuntimeTexture: {fileID: 0}
   mMotionHint: 1
   mTrackingOptimization: 0
@@ -654,8 +654,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 182955332}
   mHiddenRoot: {fileID: 0}
-  mTargetName: Tracker3
-  mDatasetName: Vuforia/SecondDataBase.xml
+  mTargetName: Sample3
+  mDatasetName: Vuforia/FirstSample.xml
   mCastedBehaviour: {fileID: 182955332}
   mMeshFilter: {fileID: 0}
   mMeshRenderer: {fileID: 0}
@@ -813,13 +813,13 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: Tracker5
+  mTrackableName: Sample5
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/SecondDataBase.xml
-  mAspectRatio: 1.7109168
+  mDataSetPath: Vuforia/FirstSample.xml
+  mAspectRatio: 1.5603167
   mImageTargetType: 0
   mWidth: 0.06
-  mHeight: 0.102655
+  mHeight: 0.093619
   mRuntimeTexture: {fileID: 0}
   mMotionHint: 1
   mTrackingOptimization: 0
@@ -918,8 +918,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 261931072}
   mHiddenRoot: {fileID: 0}
-  mTargetName: Tracker5
-  mDatasetName: Vuforia/SecondDataBase.xml
+  mTargetName: Sample5
+  mDatasetName: Vuforia/FirstSample.xml
   mCastedBehaviour: {fileID: 261931072}
   mMeshFilter: {fileID: 0}
   mMeshRenderer: {fileID: 0}
@@ -947,7 +947,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 603520686}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.096}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1048,13 +1048,13 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: Tracker2
+  mTrackableName: Sample2
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/SecondDataBase.xml
-  mAspectRatio: 1.8011167
+  mDataSetPath: Vuforia/FirstSample.xml
+  mAspectRatio: 1.5543834
   mImageTargetType: 0
   mWidth: 0.06
-  mHeight: 0.108067
+  mHeight: 0.093263
   mRuntimeTexture: {fileID: 0}
   mMotionHint: 1
   mTrackingOptimization: 0
@@ -1133,8 +1133,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 623663008}
   mHiddenRoot: {fileID: 0}
-  mTargetName: Tracker2
-  mDatasetName: Vuforia/SecondDataBase.xml
+  mTargetName: Sample2
+  mDatasetName: Vuforia/FirstSample.xml
   mCastedBehaviour: {fileID: 623663008}
   mMeshFilter: {fileID: 0}
   mMeshRenderer: {fileID: 0}
@@ -1399,7 +1399,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 775150790}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.096}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1499,7 +1499,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 845341258}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.096}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1531,7 +1531,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 902930689}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.096}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2002,7 +2002,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1199527383}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.096}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2103,13 +2103,13 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: Tracker6
+  mTrackableName: Sample6
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/SecondDataBase.xml
-  mAspectRatio: 1.7046168
+  mDataSetPath: Vuforia/FirstSample.xml
+  mAspectRatio: 1.5501333
   mImageTargetType: 0
   mWidth: 0.06
-  mHeight: 0.102277
+  mHeight: 0.093008
   mRuntimeTexture: {fileID: 0}
   mMotionHint: 1
   mTrackingOptimization: 0
@@ -2188,8 +2188,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 1222440722}
   mHiddenRoot: {fileID: 0}
-  mTargetName: Tracker6
-  mDatasetName: Vuforia/SecondDataBase.xml
+  mTargetName: Sample6
+  mDatasetName: Vuforia/FirstSample.xml
   mCastedBehaviour: {fileID: 1222440722}
   mMeshFilter: {fileID: 0}
   mMeshRenderer: {fileID: 0}
@@ -2441,7 +2441,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1306624699}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.096}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2483,7 +2483,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 886328de6a5c14cbb85854fdf1a5085b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StatusFilter: 2
+  StatusFilter: 0
   UsePoseSmoothing: 0
   AnimationCurve:
     serializedVersion: 2
@@ -2542,13 +2542,13 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: Tracker1
+  mTrackableName: Sample1
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/SecondDataBase.xml
-  mAspectRatio: 1.7427
+  mDataSetPath: Vuforia/FirstSample.xml
+  mAspectRatio: 1.5543333
   mImageTargetType: 0
   mWidth: 0.06
-  mHeight: 0.104562
+  mHeight: 0.09326
   mRuntimeTexture: {fileID: 0}
   mMotionHint: 1
   mTrackingOptimization: 0
@@ -2627,8 +2627,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 1329033488}
   mHiddenRoot: {fileID: 0}
-  mTargetName: Tracker1
-  mDatasetName: Vuforia/SecondDataBase.xml
+  mTargetName: Sample1
+  mDatasetName: Vuforia/FirstSample.xml
   mCastedBehaviour: {fileID: 1329033488}
   mMeshFilter: {fileID: 0}
   mMeshRenderer: {fileID: 0}
@@ -2911,13 +2911,13 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: Tracker4
+  mTrackableName: Sample4
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/SecondDataBase.xml
-  mAspectRatio: 1.73535
+  mDataSetPath: Vuforia/FirstSample.xml
+  mAspectRatio: 1.5560167
   mImageTargetType: 0
   mWidth: 0.06
-  mHeight: 0.104121
+  mHeight: 0.093361
   mRuntimeTexture: {fileID: 0}
   mMotionHint: 1
   mTrackingOptimization: 0
@@ -2996,8 +2996,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 1502599509}
   mHiddenRoot: {fileID: 0}
-  mTargetName: Tracker4
-  mDatasetName: Vuforia/SecondDataBase.xml
+  mTargetName: Sample4
+  mDatasetName: Vuforia/FirstSample.xml
   mCastedBehaviour: {fileID: 1502599509}
   mMeshFilter: {fileID: 0}
   mMeshRenderer: {fileID: 0}
@@ -3025,7 +3025,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1550771196}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.096}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3117,7 +3117,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1637266280}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.096}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3215,7 +3215,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1768415214}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.096}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3367,7 +3367,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1951332695}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.096}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
