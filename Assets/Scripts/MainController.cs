@@ -1,17 +1,109 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class MainController : MonoBehaviour
 {
     public static readonly string NAME_OF_AVATAR_GAME_OBJ = "AvatarOBJ";
 
+    private Dictionary<GameObject, bool> TrackerRecognized = new Dictionary<GameObject, bool>();
 
-    public GameObject[] imageTargets = new GameObject[6];
+
+    public int counterOfUpdates = 0;
+    private float each10millsec = 0;
 
 
-    public bool wasTheFirstTargetPlaced = false;
+
+
+    private GameObject floatingObj = null;
+    public float tolerance = 0.01f;
+    public int DIFF_BUFFER_LENGTH = 20;
+    public Vector3[] prevDifferences = null;
+    private int indexOfBuffer = 0;
+    public float currentVariance = 0;
+
+
+
+    private void Start()
+    {
+        CreateDecisionTree();
+    }
+
+
+    private void Update()
+    {
+        each10millsec += Time.deltaTime;
+        if (each10millsec >= 0.01f) // contatore aggiornato ogni millisecondo
+        {
+            each10millsec -= 0.01f;
+            counterOfUpdates++;
+            counterOfUpdates %= 10000;
+
+
+
+            if(NavigationManager.CurrentNode == null || NavigationManager.CurrentNode.RequireUserInteraction == false)
+            {
+                floatingObj = null;
+            }
+
+            if (floatingObj != null && TrackerRecognized[floatingObj] == true)
+            {
+                indexOfBuffer++; indexOfBuffer %= DIFF_BUFFER_LENGTH;
+                prevDifferences[indexOfBuffer] = NavigationManager.CurrentNode.ReferredTrackingMetaData.Tracker.transform.position - floatingObj.transform.position;
+
+                currentVariance = VectorVariance(prevDifferences);
+
+
+                if (currentVariance < tolerance)
+                {
+                    NavigationManager.MoveToNextThanksToCard(floatingObj, IsTheNewTrackerOnTheLeftSide());
+
+                    floatingObj = null;
+                    currentVariance = 0;
+                }
+            }
+        }
+    }
+
+
+    private float VectorVariance(Vector3[] vectors)
+    {
+        Vector3 sum = Vector3.zero;
+
+        for (int i = 0; i < vectors.Length; i++)
+        {
+            sum += vectors[i];
+        }
+
+        Vector3 average = sum / vectors.Length;
+
+        float sumSquares = 0f;
+
+        for (int i = 0; i < vectors.Length; i++)
+        {
+            float sqrMag = (vectors[i] - average).sqrMagnitude;
+            sumSquares += sqrMag;
+        }
+
+        return sumSquares / vectors.Length;
+    }
+
+
+
+    private bool IsTheNewTrackerOnTheLeftSide()
+    {
+        var transfOfCurrentNode = NavigationManager.CurrentNode.ReferredTrackingMetaData.Tracker.transform;
+        Vector3 obj1Forward = transfOfCurrentNode.forward;
+        Vector3 obj1ToObj2 = floatingObj.transform.position - transfOfCurrentNode.position;
+        float angle = Vector3.SignedAngle(obj1Forward, obj1ToObj2, Vector3.up);
+        return angle < 0;
+    }
+
+
+
+
 
 
     public void Awake()
@@ -23,33 +115,46 @@ public class MainController : MonoBehaviour
 
     public void OnTragetFound(GameObject traker)
     {
-        if(wasTheFirstTargetPlaced == false)
+        if(TrackerRecognized.Keys.Contains(traker) == false)
         {
-            wasTheFirstTargetPlaced = true;
+            if(TrackerRecognized.Count == 0)
+            {
+                NavigationManager.StartFromFirstNode(traker);
+            }
+            else
+            {
+                Debug.LogWarning("OnTragetFound " + traker.GetInstanceID() + ", CurrentTracker:  "
+                    +NavigationManager.CurrentNode.ReferredTrackingMetaData.Tracker.GetInstanceID()
+                    + ", RequireUserInteraction:"+ NavigationManager.CurrentNode.RequireUserInteraction);
 
-            NavigationManager.StartFromFirstNode(traker);
+                if(NavigationManager.CurrentNode.RequireUserInteraction == true)
+                {
+                    // Found the next tracker to consider where is going to stop
+
+                    floatingObj = traker;
+
+                    prevDifferences = new Vector3[DIFF_BUFFER_LENGTH];
+                    for(int i=0; i< DIFF_BUFFER_LENGTH; i++)
+                    {
+                        prevDifferences[i] = UnityEngine.Random.insideUnitSphere * 10000;
+                    }
+                }
+            }
         }
+
+
+        TrackerRecognized[traker] = true;
+        NavigationManager.SetVisibilityForTarget(traker, true);
     }
 
     public void OnTargetLost(GameObject tracker)
     {
         //TODO how to handle?
+
+        TrackerRecognized[tracker] = false;
+        NavigationManager.SetVisibilityForTarget(tracker, false);
     }
 
-
-    public void OnTragetInCollider(GameObject tracker, GameObject otherTracker, bool isLeft)
-    {
-        if (NavigationManager.CurrentNode.RequireUserInteraction == true
-            && NavigationManager.CurrentNode.ReferredTrackingMetaData.Tracker == tracker)
-        {
-            NavigationManager.MoveToNextThanksToCard(otherTracker, isLeft);
-        }
-    }
-
-    public void OnTragetOutCollider(GameObject tracker, GameObject otherTracker, bool isLeft)
-    {
-        //TODO how to handle?
-    }
 
 
 
@@ -59,27 +164,6 @@ public class MainController : MonoBehaviour
     }
 
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        // Cerca gli ImageTarget nella scena e li aggiunge all'array
-        for (int i = 1; i <= 6; i++)
-        {
-            string objectName = "ImageTarget" + i;
-            GameObject obj = GameObject.Find(objectName);
-            if (obj != null)
-            {
-                imageTargets[i - 1] = obj;
-            }
-            else
-            {
-                Debug.LogWarning("Impossibile trovare l'oggetto " + objectName);
-            }
-        }
-
-
-        CreateDecisionTree();
-    }
 
 
     public void CreateDecisionTree()

@@ -20,6 +20,8 @@ public static class NavigationManager
 
     public static DecisionTreeNode CurrentNode;
 
+    private static DecisionTreeNode root = null;
+
 
     private static void MoveAvatarFromTracker(NodeMetaTrackingData newTracker)
     {
@@ -37,6 +39,8 @@ public static class NavigationManager
 
         // Istanzia il prefab come figlio del gameObject padre.
         GameObject instance = GameObject.Instantiate(prefab, metaTracker.Tracker.transform);
+
+        instance.name = MainController.NAME_OF_AVATAR_GAME_OBJ;
 
         instance.transform.SetLocalPositionAndRotation(Vector3.zero, Quaternion.identity);
     }
@@ -99,6 +103,8 @@ public static class NavigationManager
     {
         CurrentNode = new DecisionTreeNode(null, firstContent);
 
+        root = CurrentNode;
+
         return CurrentNode;
     }
 
@@ -125,6 +131,13 @@ public static class NavigationManager
         // prevMetaData can be null : it is the start
         return new NodeMetaTrackingData(subject, newTracker);
     }
+
+
+    public static void SetVisibilityForTarget(GameObject target, bool isVisible)
+    {
+        DecisionTreeNode.SetVisibilityFormTarget(root, target, isVisible);
+    }
+
 }
 
 
@@ -248,6 +261,33 @@ public class NodeMetaTrackingData
 
 public class DecisionTreeNode
 {
+
+    public static void SetVisibilityFormTarget(DecisionTreeNode node, GameObject target, bool isVisibile)
+    {
+        if (node.ReferredTrackingMetaData == null)
+        {
+            node.IsNodeVisible = false;
+            return;
+        }
+        else
+        {
+            if (node.ReferredTrackingMetaData.Tracker == target)
+            {
+                node.IsNodeVisible = isVisibile;
+            }
+        }
+
+        if(node.LeftNode != null)
+        {
+            DecisionTreeNode.SetVisibilityFormTarget(node.LeftNode, target, isVisibile);
+        }
+        if (node.RightNode != null)
+        {
+            DecisionTreeNode.SetVisibilityFormTarget(node.RightNode, target, isVisibile);
+        }
+    }
+
+
     public DecisionTreeNode ParentNode { get; private set; }
 
     public DecisionTreeNode(DecisionTreeNode parent, NodeRenderedContent content)
@@ -329,6 +369,11 @@ public class DecisionTreeNode
     public bool IsLeftOrRightChoiceNode { get; private set; } = false;
 
 
+    public int millisecOfVisibility = 0;
+
+    public bool IsNodeVisible = false;
+
+
     public void Unload()
     {
         Content.Dispose();
@@ -360,7 +405,31 @@ public class DecisionTreeNode
     {
         yield return new WaitForSeconds(NavigationManager.DELAY_TO_READY_TRANSITORIAL_NODE);
 
-        NavigationManager.MoveToNextThanksToTimer(this);
+        int lastCounter = NavigationManager.mainController.counterOfUpdates;
+
+        yield return new WaitWhile(
+            () =>
+            {
+                if(millisecOfVisibility <= 0 || NavigationManager.CurrentNode != this)
+                {
+                    return false;
+                }
+
+                if(lastCounter != NavigationManager.mainController.counterOfUpdates && IsNodeVisible == true)
+                {
+                    lastCounter = NavigationManager.mainController.counterOfUpdates;
+
+                    millisecOfVisibility-= 10;
+                }
+
+                return true;
+            }
+            );
+
+        if(NavigationManager.CurrentNode == this)
+        {
+            NavigationManager.MoveToNextThanksToTimer(this);
+        }
     }
 
 
