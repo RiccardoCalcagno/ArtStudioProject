@@ -14,6 +14,8 @@ public static class NavigationManager
 
     public static MainController mainController;
 
+    private static readonly Vector3 RELATIVE_POSITION_AVATAR = new Vector3(0, 0, -0.05f);
+
 
     public static readonly float DELAY_TO_READY_TRANSITORIAL_NODE = 5.0f; // sec
         
@@ -29,7 +31,7 @@ public static class NavigationManager
 
         avatar.transform.parent = newTracker.Tracker.transform;
 
-        avatar.transform.SetLocalPositionAndRotation(Vector3.zero, Quaternion.identity);
+        avatar.transform.SetLocalPositionAndRotation(RELATIVE_POSITION_AVATAR, Quaternion.identity);
 
     }
     private static void IstantiateAvatarToTracker(NodeMetaTrackingData metaTracker)
@@ -42,7 +44,7 @@ public static class NavigationManager
 
         instance.name = MainController.NAME_OF_AVATAR_GAME_OBJ;
 
-        instance.transform.SetLocalPositionAndRotation(Vector3.zero, Quaternion.identity);
+        instance.transform.SetLocalPositionAndRotation(RELATIVE_POSITION_AVATAR, Quaternion.identity);
     }
 
 
@@ -73,20 +75,29 @@ public static class NavigationManager
     {
 
         DecisionTreeNode nextTrackingNode;
+        string prevTextChoice = "";
 
         if(isLeft == true)
         {
             nextTrackingNode = CurrentNode.LeftNode.LeftNode;
+            prevTextChoice = CurrentNode.LeftNode.Content.description;
         }
         else
         {
             nextTrackingNode = CurrentNode.RightNode.LeftNode;
+            prevTextChoice = CurrentNode.RightNode.Content.description;
         }
+
+        
+        CurrentNode.LeftNode.Unload();
+        CurrentNode.RightNode.Unload();
+
+        CurrentNode.Content.description = CurrentNode.Content.description + ":\n\n" + prevTextChoice;
+        CurrentNode.Content.UpdateView();
 
         var newMetaDataTracker = CreateNewMetaDataBasedOnThePrev(nextTrackingNode, newTracker);
 
         nextTrackingNode.ReferredTrackingMetaData = newMetaDataTracker;
-
 
         CurrentNode = nextTrackingNode;
 
@@ -144,10 +155,15 @@ public static class NavigationManager
 
 public class NodeRenderedContent
 {
-    public NodeRenderedContent(string description = "", string nameOfPrefab3D = "")
+    public NodeRenderedContent(string description = "", string nameOfPrefab3D = "", string nameOfAudioClip = "")
     {
         this.nameOfPrefab3D = nameOfPrefab3D;
         this.description = description;
+
+        if(nameOfAudioClip!= "")
+        {
+            audioClip = Resources.Load<AudioClip>("Audios/" + nameOfAudioClip);
+        }
     }
 
     public DecisionTreeNode nodeSubject;
@@ -156,7 +172,38 @@ public class NodeRenderedContent
 
     public string description = "";
 
+    public AudioClip audioClip = null;
+
+    private bool audioStarted = false;
+
     private GameObject parentWhereItIsIstantiated = null;
+
+    public void UpdateView()
+    {
+        if(parentWhereItIsIstantiated!= null)
+        {
+            var instance = parentWhereItIsIstantiated.GetComponentsInChildren<Transform>().FirstOrDefault(t => t.gameObject.name == "Content")?.gameObject;
+
+            var asset3D = instance.GetComponentsInChildren<Transform>().FirstOrDefault(t => t.gameObject.name == "Asset3D")?.gameObject;
+            if(asset3D!= null) GameObject.Destroy(asset3D);
+
+            if (nameOfPrefab3D != "")
+            {
+                GameObject asset3DPrefab = Resources.Load<GameObject>("Prefabs/" + nameOfPrefab3D);
+
+                var anchor = instance.GetComponentsInChildren<Transform>().FirstOrDefault(t => t.gameObject.name == "PrefabAnchorCentered")?.gameObject;
+                // Istanzia il prefab come figlio del gameObject padre.
+                var ass3Dgmobj = GameObject.Instantiate(asset3DPrefab, anchor.transform);
+
+                ass3Dgmobj.name = "Asset3D";
+
+                ass3Dgmobj.transform.SetLocalPositionAndRotation(Vector3.zero, Quaternion.identity);
+            }
+
+            var text = instance.GetComponentInChildren<TMPro.TextMeshProUGUI>();
+            text.text = description;
+        }
+    }
 
     public void InstantiateContentInPlace()
     {
@@ -186,24 +233,53 @@ public class NodeRenderedContent
         // Istanzia il prefab come figlio del gameObject padre.
         GameObject instance = GameObject.Instantiate(contentPrefab, parentWhereItIsIstantiated.transform);
         instance.name = "Content";
-
+        instance.transform.SetAsFirstSibling();
         instance.transform.SetLocalPositionAndRotation(Vector3.zero, Quaternion.identity);
 
-        if (nameOfPrefab3D != "")
-        {
-            GameObject asset3DPrefab = Resources.Load<GameObject>("Prefabs/"+ nameOfPrefab3D);
 
-            var anchor = instance.GetComponentsInChildren<Transform>().FirstOrDefault(t => t.gameObject.name == "PrefabAnchorCentered")?.gameObject;
-            // Istanzia il prefab come figlio del gameObject padre.
-            var ass3Dgmobj = GameObject.Instantiate(asset3DPrefab, anchor.transform);
-
-            ass3Dgmobj.transform.SetLocalPositionAndRotation(Vector3.zero, Quaternion.identity);
-        }
-
-        var text = instance.GetComponentInChildren<TMPro.TextMeshProUGUI>();
-        text.text = description;
+        UpdateView();
     }
 
+    public int ResumeItsAudio()
+    {
+        if(audioClip != null)
+        {
+            if(NavigationManager.mainController.TrackerRecognized.TryGetValue(nodeSubject.ReferredTrackingMetaData.Tracker, out bool value) == true && value == true)
+            {
+                if (audioStarted == false)
+                {
+                    NavigationManager.mainController.audioSource.Stop();
+                    NavigationManager.mainController.audioSource.clip = audioClip;  // Imposta l'AudioClip
+                    NavigationManager.mainController.audioSource.Play();  // Riproduci l'AudioClip
+
+                    audioStarted = true;
+                }
+                else
+                {
+                    if (NavigationManager.mainController.audioSource.clip == audioClip)
+                    {
+                        NavigationManager.mainController.audioSource.UnPause();
+                    }
+                    else
+                    {
+                        return 0;
+                    }
+                }
+            }
+
+            return (int)( (audioClip.length - NavigationManager.mainController.audioSource.time) * 1000f) + 400;  // Restituisci la durata in millisecondi
+        }
+
+        return (int)(NavigationManager.DELAY_TO_READY_TRANSITORIAL_NODE * 1000);
+    }
+
+    public void PauseAudio()
+    {
+        if (NavigationManager.mainController.audioSource.clip == audioClip)
+        {
+            NavigationManager.mainController.audioSource.Pause();
+        }
+    }
 
     public void Dispose()
     {
@@ -216,6 +292,8 @@ public class NodeRenderedContent
 
             parentWhereItIsIstantiated = null;
         }
+
+        PauseAudio();
     }
 }
 
@@ -273,6 +351,18 @@ public class DecisionTreeNode
         {
             if (node.ReferredTrackingMetaData.Tracker == target)
             {
+                if(node.IsNodeVisible != isVisibile && node == NavigationManager.CurrentNode)
+                {
+                    if (isVisibile)
+                    {
+                        node.Content.ResumeItsAudio();
+                    }
+                    else
+                    {
+                        node.Content.PauseAudio();
+                    }
+
+                }
                 node.IsNodeVisible = isVisibile;
             }
         }
@@ -369,9 +459,18 @@ public class DecisionTreeNode
     public bool IsLeftOrRightChoiceNode { get; private set; } = false;
 
 
-    public int millisecOfVisibility = 0;
+    private int millisecOfVisibility = 0;
 
     public bool IsNodeVisible = false;
+
+
+    public void EndAnyTimerOfCard()
+    {
+        if(millisecOfVisibility > 0)
+        {
+            millisecOfVisibility = 0;
+        }
+    }
 
 
     public void Unload()
@@ -395,16 +494,19 @@ public class DecisionTreeNode
             }
         }
 
-        if(RequireUserInteraction == false && IsLeftOrRightChoiceNode == false)
+
+        if(RequireUserInteraction == false && IsLeftOrRightChoiceNode == false && this == NavigationManager.CurrentNode)
         {
+            int waitingTime = Content.ResumeItsAudio();
+
+            millisecOfVisibility = waitingTime;
+
             NavigationManager.mainController.StartCoroutine(TimerThenGoToNext());
         }
     }
 
     private IEnumerator TimerThenGoToNext()
     {
-        yield return new WaitForSeconds(NavigationManager.DELAY_TO_READY_TRANSITORIAL_NODE);
-
         int lastCounter = NavigationManager.mainController.counterOfUpdates;
 
         yield return new WaitWhile(
@@ -439,7 +541,12 @@ public class DecisionTreeNode
         if (IsLeftOrRightChoiceNode == true)
         {
             throw new InvalidOperationException("Each choice node need to start from a not choice node");
-        } 
+        }
+
+        if(rightNodeContent.audioClip != null)
+        {
+            throw new InvalidOperationException("NO! the choices of a tree should not have audio attaced, please provide in the parent node an audio that has inside also the text of the tw choices");
+        }
 
         this.leftNode = new DecisionTreeNode(this, leftNodeContent);
         this.rightNode = new DecisionTreeNode(this, rightNodeContent);
