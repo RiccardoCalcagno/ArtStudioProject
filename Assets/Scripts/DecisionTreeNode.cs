@@ -494,14 +494,16 @@ public class DecisionTreeNode
             }
         }
 
-
-        if(RequireUserInteraction == false && IsLeftOrRightChoiceNode == false && this == NavigationManager.CurrentNode)
+        if(IsLeftOrRightChoiceNode == false && this == NavigationManager.CurrentNode)
         {
             int waitingTime = Content.ResumeItsAudio();
 
-            millisecOfVisibility = waitingTime;
+            if (RequireUserInteraction == false)
+            {
+                millisecOfVisibility = waitingTime;
 
-            NavigationManager.mainController.StartCoroutine(TimerThenGoToNext());
+                NavigationManager.mainController.StartCoroutine(TimerThenGoToNext());
+            }
         }
     }
 
