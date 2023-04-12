@@ -14,7 +14,8 @@ public static class NavigationManager
 
     public static MainController mainController;
 
-    private static readonly Vector3 RELATIVE_POSITION_AVATAR = new Vector3(0, 0, -0.05f);
+    public static readonly Vector3 RELATIVE_POSITION_AVATAR = new Vector3(-0.0076f, 0, -0.04f);
+    public static readonly Vector3 RELATIVE_SCALING_AVATAR = new Vector3(0.02739801f, 0.02739801f, 0.02739801f);
 
 
     public static readonly float DELAY_TO_READY_TRANSITORIAL_NODE = 5.0f; // sec
@@ -24,27 +25,32 @@ public static class NavigationManager
 
     private static DecisionTreeNode root = null;
 
+    public static GameObject avatar = null;
+
 
     private static void MoveAvatarFromTracker(NodeMetaTrackingData newTracker)
     {
-        var avatar = GameObject.Find(MainController.NAME_OF_AVATAR_GAME_OBJ);
+        if(avatar != null)
+        {
+            avatar.transform.parent = newTracker.Tracker.transform;
 
-        avatar.transform.parent = newTracker.Tracker.transform;
+            avatar.transform.localScale = RELATIVE_SCALING_AVATAR;
 
-        avatar.transform.SetLocalPositionAndRotation(RELATIVE_POSITION_AVATAR, Quaternion.identity);
-
+            avatar.transform.SetLocalPositionAndRotation(RELATIVE_POSITION_AVATAR, Quaternion.identity);
+        }
     }
     private static void IstantiateAvatarToTracker(NodeMetaTrackingData metaTracker)
     {
         // TODO
-        GameObject prefab = Resources.Load<GameObject>("Prefabs/Avatar");
+        GameObject prefab = Resources.Load<GameObject>("Avatars/Idle");
 
         // Istanzia il prefab come figlio del gameObject padre.
-        GameObject instance = GameObject.Instantiate(prefab, metaTracker.Tracker.transform);
+        avatar = GameObject.Instantiate(prefab, metaTracker.Tracker.transform);
 
-        instance.name = MainController.NAME_OF_AVATAR_GAME_OBJ;
+        avatar.name = MainController.NAME_OF_AVATAR_GAME_OBJ;
 
-        instance.transform.SetLocalPositionAndRotation(RELATIVE_POSITION_AVATAR, Quaternion.identity);
+        avatar.transform.localScale = RELATIVE_SCALING_AVATAR;
+        avatar.transform.SetLocalPositionAndRotation(RELATIVE_POSITION_AVATAR, Quaternion.identity);
     }
 
 
@@ -75,24 +81,31 @@ public static class NavigationManager
     {
 
         DecisionTreeNode nextTrackingNode;
-        string prevTextChoice = "";
+
 
         if(isLeft == true)
         {
             nextTrackingNode = CurrentNode.LeftNode.LeftNode;
-            prevTextChoice = CurrentNode.LeftNode.Content.description;
         }
         else
         {
             nextTrackingNode = CurrentNode.RightNode.LeftNode;
-            prevTextChoice = CurrentNode.RightNode.Content.description;
         }
 
-        
+
+        string prevTextChoice = nextTrackingNode.ParentNode.Content.description;
+
+
+
         CurrentNode.LeftNode.Unload();
         CurrentNode.RightNode.Unload();
 
         CurrentNode.Content.description = CurrentNode.Content.description + ":\n\n" + prevTextChoice;
+        if(CurrentNode.ParentNode!= null)
+        {
+            CurrentNode.Content.nameOfPrefab3D = nextTrackingNode.ParentNode.Content.nameOfPrefab3D;
+        }
+
         CurrentNode.Content.UpdateView();
 
         var newMetaDataTracker = CreateNewMetaDataBasedOnThePrev(nextTrackingNode, newTracker);
@@ -155,7 +168,7 @@ public static class NavigationManager
 
 public class NodeRenderedContent
 {
-    public NodeRenderedContent(string description = "", string nameOfPrefab3D = "", string nameOfAudioClip = "")
+    public NodeRenderedContent(string description = "", string nameOfPrefab3D = "", string nameOfAudioClip = "", string animationToTrigger ="")
     {
         this.nameOfPrefab3D = nameOfPrefab3D;
         this.description = description;
@@ -164,6 +177,8 @@ public class NodeRenderedContent
         {
             audioClip = Resources.Load<AudioClip>("Audios/" + nameOfAudioClip);
         }
+
+        this.animatorController = animationToTrigger;
     }
 
     public DecisionTreeNode nodeSubject;
@@ -173,6 +188,8 @@ public class NodeRenderedContent
     public string description = "";
 
     public AudioClip audioClip = null;
+
+    public string animatorController = null;
 
     private bool audioStarted = false;
 
@@ -498,6 +515,10 @@ public class DecisionTreeNode
         {
             int waitingTime = Content.ResumeItsAudio();
 
+            
+             NavigationManager.mainController.StartCoroutine(SetAnimation(Content.animatorController));
+
+
             if (RequireUserInteraction == false)
             {
                 millisecOfVisibility = waitingTime;
@@ -505,6 +526,30 @@ public class DecisionTreeNode
                 NavigationManager.mainController.StartCoroutine(TimerThenGoToNext());
             }
         }
+    }
+
+    private IEnumerator SetAnimation(string avatarPrefabName)
+    {
+        if(NavigationManager.avatar!= null)
+        {
+            GameObject prefab = Resources.Load<GameObject>("Avatars/" + avatarPrefabName);
+
+            // Istanzia il prefab come figlio del gameObject padre.
+            var newAvatar = GameObject.Instantiate(prefab, NavigationManager.avatar.transform.parent.transform);
+
+            newAvatar.name = MainController.NAME_OF_AVATAR_GAME_OBJ;
+
+            newAvatar.transform.localScale = NavigationManager.RELATIVE_SCALING_AVATAR;
+            newAvatar.transform.SetLocalPositionAndRotation(NavigationManager.RELATIVE_POSITION_AVATAR, Quaternion.identity);
+
+            var oldAv = NavigationManager.avatar;
+            NavigationManager.avatar = newAvatar;
+
+            GameObject.Destroy(oldAv);
+        }
+
+
+        yield return null;
     }
 
     private IEnumerator TimerThenGoToNext()
