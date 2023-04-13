@@ -41,7 +41,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7505662122582486769}
-  - component: {fileID: 2715177266214064392}
+  - component: {fileID: 2720241122654815723}
+  - component: {fileID: 2632947428944755369}
   m_Layer: 0
   m_Name: Factory
   m_TagString: Untagged
@@ -57,15 +58,23 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7161470266194949195}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.005, y: 0.038037, z: 0.012}
+  m_LocalPosition: {x: -0.005, y: 0.0003, z: 0.012}
   m_LocalScale: {x: 0.067296, y: 0.067296, z: 0.067296}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4066781700609595811}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
---- !u!137 &2715177266214064392
-SkinnedMeshRenderer:
+--- !u!33 &2720241122654815723
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7161470266194949195}
+  m_Mesh: {fileID: -2740267508135051043, guid: 852fff65d24b55347becb7c07004e0ca, type: 3}
+--- !u!23 &2632947428944755369
+MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -79,7 +88,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 3
+  m_RayTracingMode: 2
   m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
@@ -105,16 +114,4 @@ SkinnedMeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 1
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: -2740267508135051043, guid: 852fff65d24b55347becb7c07004e0ca, type: 3}
-  m_Bones:
-  - {fileID: 7505662122582486769}
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 0}
-  m_AABB:
-    m_Center: {x: 0, y: 0.99185693, z: 0}
-    m_Extent: {x: 1.25, y: 0.99185693, z: 1.1297638}
-  m_DirtyAABB: 0
+  m_AdditionalVertexStreams: {fileID: 0}

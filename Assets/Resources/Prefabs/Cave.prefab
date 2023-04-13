@@ -41,7 +41,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8636401568837247836}
-  - component: {fileID: 4205765848938208421}
+  - component: {fileID: 5686394648563735321}
+  - component: {fileID: 3784440269618712951}
   m_Layer: 0
   m_Name: Cave2
   m_TagString: Untagged
@@ -64,8 +65,16 @@ Transform:
   m_Father: {fileID: 187506986189760311}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!137 &4205765848938208421
-SkinnedMeshRenderer:
+--- !u!33 &5686394648563735321
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8976089486896921062}
+  m_Mesh: {fileID: -8245073954324640798, guid: dc815ad3acae9d44e94c010426a0fab9, type: 3}
+--- !u!23 &3784440269618712951
+MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -79,7 +88,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 3
+  m_RayTracingMode: 2
   m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
@@ -105,16 +114,4 @@ SkinnedMeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 1
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: -8245073954324640798, guid: dc815ad3acae9d44e94c010426a0fab9, type: 3}
-  m_Bones:
-  - {fileID: 8636401568837247836}
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 0}
-  m_AABB:
-    m_Center: {x: 0, y: 0.5538513, z: 0}
-    m_Extent: {x: 1.2449858, y: 0.5538513, z: 1.25}
-  m_DirtyAABB: 0
+  m_AdditionalVertexStreams: {fileID: 0}

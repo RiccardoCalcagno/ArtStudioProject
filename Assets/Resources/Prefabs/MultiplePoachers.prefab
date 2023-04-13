@@ -28,13 +28,13 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 4157923806236726342}
-  - {fileID: 8065822980951680110}
-  - {fileID: 3932540823196825682}
+  - {fileID: 7736429351585999643}
+  - {fileID: 5632430143415923484}
+  - {fileID: 2301903625492613217}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &3489974362940722326
+--- !u!1001 &1273119199350348772
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -44,7 +44,7 @@ PrefabInstance:
     - target: {fileID: 4729082819900799053, guid: 00f205052647ff04db3de8db2227568e,
         type: 3}
       propertyPath: m_Name
-      value: GiraffeWithShotgun (4)
+      value: GiraffeWithShotgun (1)
       objectReference: {fileID: 0}
     - target: {fileID: 6881903154431256824, guid: 00f205052647ff04db3de8db2227568e,
         type: 3}
@@ -103,13 +103,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00f205052647ff04db3de8db2227568e, type: 3}
---- !u!4 &8065822980951680110 stripped
+--- !u!4 &5632430143415923484 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6881903154431256824, guid: 00f205052647ff04db3de8db2227568e,
     type: 3}
-  m_PrefabInstance: {fileID: 3489974362940722326}
+  m_PrefabInstance: {fileID: 1273119199350348772}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &7364097707107073214
+--- !u!1001 &3808989704229192675
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -119,7 +119,7 @@ PrefabInstance:
     - target: {fileID: 4729082819900799053, guid: 00f205052647ff04db3de8db2227568e,
         type: 3}
       propertyPath: m_Name
-      value: GiraffeWithShotgun (3)
+      value: GiraffeWithShotgun
       objectReference: {fileID: 0}
     - target: {fileID: 6881903154431256824, guid: 00f205052647ff04db3de8db2227568e,
         type: 3}
@@ -178,13 +178,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00f205052647ff04db3de8db2227568e, type: 3}
---- !u!4 &4157923806236726342 stripped
+--- !u!4 &7736429351585999643 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6881903154431256824, guid: 00f205052647ff04db3de8db2227568e,
     type: 3}
-  m_PrefabInstance: {fileID: 7364097707107073214}
+  m_PrefabInstance: {fileID: 3808989704229192675}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &7571218918566367402
+--- !u!1001 &4644178046279491737
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -194,7 +194,7 @@ PrefabInstance:
     - target: {fileID: 4729082819900799053, guid: 00f205052647ff04db3de8db2227568e,
         type: 3}
       propertyPath: m_Name
-      value: GiraffeWithShotgun (5)
+      value: GiraffeWithShotgun (2)
       objectReference: {fileID: 0}
     - target: {fileID: 6881903154431256824, guid: 00f205052647ff04db3de8db2227568e,
         type: 3}
@@ -253,9 +253,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00f205052647ff04db3de8db2227568e, type: 3}
---- !u!4 &3932540823196825682 stripped
+--- !u!4 &2301903625492613217 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6881903154431256824, guid: 00f205052647ff04db3de8db2227568e,
     type: 3}
-  m_PrefabInstance: {fileID: 7571218918566367402}
+  m_PrefabInstance: {fileID: 4644178046279491737}
   m_PrefabAsset: {fileID: 0}

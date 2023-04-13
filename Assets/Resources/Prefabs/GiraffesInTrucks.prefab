@@ -818,7 +818,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2216006525358710988}
-  - component: {fileID: 6000939336146738997}
+  - component: {fileID: 1199984536794344583}
+  - component: {fileID: 183091206528333086}
   m_Layer: 0
   m_Name: giraffeObj
   m_TagString: Untagged
@@ -841,8 +842,16 @@ Transform:
   m_Father: {fileID: 3084188876758874231}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!137 &6000939336146738997
-SkinnedMeshRenderer:
+--- !u!33 &1199984536794344583
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552341768899689078}
+  m_Mesh: {fileID: 4316085582229406644, guid: 6040789cf1b4a4474a00304a323c384a, type: 3}
+--- !u!23 &183091206528333086
+MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -856,7 +865,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 3
+  m_RayTracingMode: 2
   m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
@@ -882,19 +891,7 @@ SkinnedMeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 1
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 4316085582229406644, guid: 6040789cf1b4a4474a00304a323c384a, type: 3}
-  m_Bones:
-  - {fileID: 2216006525358710988}
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 0}
-  m_AABB:
-    m_Center: {x: 0, y: 1.25, z: 0}
-    m_Extent: {x: 0.21803698, y: 1.25, z: 0.9173874}
-  m_DirtyAABB: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1645201345684028812
 GameObject:
   m_ObjectHideFlags: 0
@@ -1206,7 +1203,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1288045534011657432}
-  - component: {fileID: 6658367742691701537}
+  - component: {fileID: 5987922361357898662}
+  - component: {fileID: 7076699931144710014}
   m_Layer: 0
   m_Name: giraffeObj
   m_TagString: Untagged
@@ -1229,8 +1227,16 @@ Transform:
   m_Father: {fileID: 2733093257475216483}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!137 &6658367742691701537
-SkinnedMeshRenderer:
+--- !u!33 &5987922361357898662
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1921874007363901026}
+  m_Mesh: {fileID: 4316085582229406644, guid: 6040789cf1b4a4474a00304a323c384a, type: 3}
+--- !u!23 &7076699931144710014
+MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1244,7 +1250,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 3
+  m_RayTracingMode: 2
   m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
@@ -1270,19 +1276,7 @@ SkinnedMeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 1
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 4316085582229406644, guid: 6040789cf1b4a4474a00304a323c384a, type: 3}
-  m_Bones:
-  - {fileID: 1288045534011657432}
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 0}
-  m_AABB:
-    m_Center: {x: 0, y: 1.25, z: 0}
-    m_Extent: {x: 0.21803698, y: 1.25, z: 0.9173874}
-  m_DirtyAABB: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1922096450298433301
 GameObject:
   m_ObjectHideFlags: 0
@@ -1755,7 +1749,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3019933558115599234}
-  - component: {fileID: 7237211121449892987}
+  - component: {fileID: 7958952699650895276}
+  - component: {fileID: 1728345807012026319}
   m_Layer: 0
   m_Name: shotgun
   m_TagString: Untagged
@@ -1778,8 +1773,16 @@ Transform:
   m_Father: {fileID: 8907744872563933865}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!137 &7237211121449892987
-SkinnedMeshRenderer:
+--- !u!33 &7958952699650895276
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2495879569839708472}
+  m_Mesh: {fileID: 4900605855736196800, guid: 7d5b7f850769fed489e36447879c5e32, type: 3}
+--- !u!23 &1728345807012026319
+MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1793,7 +1796,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 3
+  m_RayTracingMode: 2
   m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
@@ -1819,19 +1822,7 @@ SkinnedMeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 1
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 4900605855736196800, guid: 7d5b7f850769fed489e36447879c5e32, type: 3}
-  m_Bones:
-  - {fileID: 3019933558115599234}
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 0}
-  m_AABB:
-    m_Center: {x: 0, y: 0.24553311, z: 0}
-    m_Extent: {x: 0.049328342, y: 0.24553311, z: 1.25}
-  m_DirtyAABB: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &2498160465149403002
 GameObject:
   m_ObjectHideFlags: 0
@@ -2525,7 +2516,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5362439771545154935}
-  - component: {fileID: 1983996786546882232}
+  - component: {fileID: 8647635158294299739}
+  - component: {fileID: 1323858354092054803}
   m_Layer: 0
   m_Name: shotgun
   m_TagString: Untagged
@@ -2548,8 +2540,16 @@ Transform:
   m_Father: {fileID: 293117490492829999}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!137 &1983996786546882232
-SkinnedMeshRenderer:
+--- !u!33 &8647635158294299739
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3766843185010297673}
+  m_Mesh: {fileID: 4900605855736196800, guid: 7d5b7f850769fed489e36447879c5e32, type: 3}
+--- !u!23 &1323858354092054803
+MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2563,7 +2563,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 3
+  m_RayTracingMode: 2
   m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
@@ -2589,19 +2589,7 @@ SkinnedMeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 1
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 4900605855736196800, guid: 7d5b7f850769fed489e36447879c5e32, type: 3}
-  m_Bones:
-  - {fileID: 5362439771545154935}
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 0}
-  m_AABB:
-    m_Center: {x: 0, y: 0.24553311, z: 0}
-    m_Extent: {x: 0.049328342, y: 0.24553311, z: 1.25}
-  m_DirtyAABB: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &3835379064277493407
 GameObject:
   m_ObjectHideFlags: 0
@@ -2973,7 +2961,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4993346469833415011}
-  - component: {fileID: 1488521280404298412}
+  - component: {fileID: 2686895271159076890}
+  - component: {fileID: 5647454712151154188}
   m_Layer: 0
   m_Name: shotgun
   m_TagString: Untagged
@@ -2996,8 +2985,16 @@ Transform:
   m_Father: {fileID: 806571402918911291}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!137 &1488521280404298412
-SkinnedMeshRenderer:
+--- !u!33 &2686895271159076890
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4280208879207114589}
+  m_Mesh: {fileID: 4900605855736196800, guid: 7d5b7f850769fed489e36447879c5e32, type: 3}
+--- !u!23 &5647454712151154188
+MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3011,7 +3008,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 3
+  m_RayTracingMode: 2
   m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
@@ -3037,19 +3034,7 @@ SkinnedMeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 1
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 4900605855736196800, guid: 7d5b7f850769fed489e36447879c5e32, type: 3}
-  m_Bones:
-  - {fileID: 4993346469833415011}
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 0}
-  m_AABB:
-    m_Center: {x: 0, y: 0.24553311, z: 0}
-    m_Extent: {x: 0.049328342, y: 0.24553311, z: 1.25}
-  m_DirtyAABB: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &4444551314729035455
 GameObject:
   m_ObjectHideFlags: 0
@@ -3487,7 +3472,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5232251317226557668}
-  - component: {fileID: 368160887785008925}
+  - component: {fileID: 8635491372149904936}
+  - component: {fileID: 2271323495113570355}
   m_Layer: 0
   m_Name: giraffeObj
   m_TagString: Untagged
@@ -3510,8 +3496,8 @@ Transform:
   m_Father: {fileID: 8976056245052213343}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!137 &368160887785008925
-SkinnedMeshRenderer:
+--- !u!23 &8635491372149904936
+MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3525,7 +3511,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 3
+  m_RayTracingMode: 2
   m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
@@ -3551,19 +3537,15 @@ SkinnedMeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 1
-  m_SkinnedMotionVectors: 1
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &2271323495113570355
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4888481977913281118}
   m_Mesh: {fileID: 4316085582229406644, guid: 6040789cf1b4a4474a00304a323c384a, type: 3}
-  m_Bones:
-  - {fileID: 5232251317226557668}
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 0}
-  m_AABB:
-    m_Center: {x: 0, y: 1.25, z: 0}
-    m_Extent: {x: 0.21803698, y: 1.25, z: 0.9173874}
-  m_DirtyAABB: 0
 --- !u!1 &5062579047261948258
 GameObject:
   m_ObjectHideFlags: 0
@@ -4796,7 +4778,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1375718573157181771}
-  - component: {fileID: 4824530439764208260}
+  - component: {fileID: 3844185845423036881}
+  - component: {fileID: 270811093166744395}
   m_Layer: 0
   m_Name: shotgun
   m_TagString: Untagged
@@ -4819,8 +4802,16 @@ Transform:
   m_Father: {fileID: 6732286069013196051}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!137 &4824530439764208260
-SkinnedMeshRenderer:
+--- !u!33 &3844185845423036881
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7870671073379030901}
+  m_Mesh: {fileID: 4900605855736196800, guid: 7d5b7f850769fed489e36447879c5e32, type: 3}
+--- !u!23 &270811093166744395
+MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4834,7 +4825,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 3
+  m_RayTracingMode: 2
   m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
@@ -4860,19 +4851,7 @@ SkinnedMeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 1
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 4900605855736196800, guid: 7d5b7f850769fed489e36447879c5e32, type: 3}
-  m_Bones:
-  - {fileID: 1375718573157181771}
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 0}
-  m_AABB:
-    m_Center: {x: 0, y: 0.24553311, z: 0}
-    m_Extent: {x: 0.049328342, y: 0.24553311, z: 1.25}
-  m_DirtyAABB: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &7986510382171831792
 GameObject:
   m_ObjectHideFlags: 0
@@ -5146,7 +5125,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9202142092731413418}
-  - component: {fileID: 3617476560495905875}
+  - component: {fileID: 6204374828860694956}
+  - component: {fileID: 4917423886404317258}
   m_Layer: 0
   m_Name: shotgun
   m_TagString: Untagged
@@ -5169,8 +5149,16 @@ Transform:
   m_Father: {fileID: 3297422368683913857}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!137 &3617476560495905875
-SkinnedMeshRenderer:
+--- !u!33 &6204374828860694956
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8430531617811638544}
+  m_Mesh: {fileID: 4900605855736196800, guid: 7d5b7f850769fed489e36447879c5e32, type: 3}
+--- !u!23 &4917423886404317258
+MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -5184,7 +5172,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 3
+  m_RayTracingMode: 2
   m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
@@ -5210,19 +5198,7 @@ SkinnedMeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 1
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 4900605855736196800, guid: 7d5b7f850769fed489e36447879c5e32, type: 3}
-  m_Bones:
-  - {fileID: 9202142092731413418}
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 0}
-  m_AABB:
-    m_Center: {x: 0, y: 0.24553311, z: 0}
-    m_Extent: {x: 0.049328342, y: 0.24553311, z: 1.25}
-  m_DirtyAABB: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &8488875290132167751
 GameObject:
   m_ObjectHideFlags: 0
@@ -5869,7 +5845,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8112192243228729278}
-  - component: {fileID: 4400864992746152007}
+  - component: {fileID: 5048165641281963015}
+  - component: {fileID: 6121395466424051520}
   m_Layer: 0
   m_Name: shotgun
   m_TagString: Untagged
@@ -5892,8 +5869,16 @@ Transform:
   m_Father: {fileID: 2513594130893627029}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!137 &4400864992746152007
-SkinnedMeshRenderer:
+--- !u!33 &5048165641281963015
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8926023900230550788}
+  m_Mesh: {fileID: 4900605855736196800, guid: 7d5b7f850769fed489e36447879c5e32, type: 3}
+--- !u!23 &6121395466424051520
+MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -5907,7 +5892,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 3
+  m_RayTracingMode: 2
   m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
@@ -5933,19 +5918,7 @@ SkinnedMeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 1
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 4900605855736196800, guid: 7d5b7f850769fed489e36447879c5e32, type: 3}
-  m_Bones:
-  - {fileID: 8112192243228729278}
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 0}
-  m_AABB:
-    m_Center: {x: 0, y: 0.24553311, z: 0}
-    m_Extent: {x: 0.049328342, y: 0.24553311, z: 1.25}
-  m_DirtyAABB: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &8969655235956347720
 GameObject:
   m_ObjectHideFlags: 0

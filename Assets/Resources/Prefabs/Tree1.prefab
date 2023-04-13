@@ -9,7 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2209441605126268946}
-  - component: {fileID: 5993952276270602219}
+  - component: {fileID: 9214199763703435476}
+  - component: {fileID: 1180046616969635267}
   m_Layer: 0
   m_Name: tree3
   m_TagString: Untagged
@@ -32,8 +33,16 @@ Transform:
   m_Father: {fileID: 2070040918135033169}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!137 &5993952276270602219
-SkinnedMeshRenderer:
+--- !u!33 &9214199763703435476
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1576914918986576552}
+  m_Mesh: {fileID: -1680814799139099683, guid: f5fb178821e0f420b8515f893b00694f, type: 3}
+--- !u!23 &1180046616969635267
+MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -47,13 +56,13 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 3
+  m_RayTracingMode: 2
   m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
   - {fileID: -4279979935521194213, guid: f5fb178821e0f420b8515f893b00694f, type: 3}
-  - {fileID: -7432753779728416494, guid: f5fb178821e0f420b8515f893b00694f, type: 3}
+  - {fileID: -1249147359346859369, guid: e90b695168435a34d907c353233cdb93, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -74,19 +83,7 @@ SkinnedMeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 1
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: -1680814799139099683, guid: f5fb178821e0f420b8515f893b00694f, type: 3}
-  m_Bones:
-  - {fileID: 2209441605126268946}
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 0}
-  m_AABB:
-    m_Center: {x: 0, y: 1.25, z: 0}
-    m_Extent: {x: 0.8790695, y: 1.25, z: 0.9144794}
-  m_DirtyAABB: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &5248602596263923053
 GameObject:
   m_ObjectHideFlags: 0
