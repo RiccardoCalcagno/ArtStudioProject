@@ -1,0 +1,458 @@
+Unity Editor version:    2021.3.21f1 (1b156197d683)
+Branch:                  2021.3/staging
+Build type:              Release
+Batch mode:              YES
+macOS version:           Version 12.6 (Build 21G115)
+Darwin version:          21.6.0
+Architecture:            x86_64
+Running under Rosetta:   NO
+Available memory:        8192 MB
+Using pre-set license
+Pro License: YES
+
+COMMAND LINE ARGUMENTS:
+/Users/kentrachmat/Applications/2021.3.21f1/Unity.app/Contents/MacOS/Unity
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+/Users/kentrachmat/Downloads/animations 2
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+57809
+Successfully changed project path to: /Users/kentrachmat/Downloads/animations 2
+/Users/kentrachmat/Downloads/animations 2
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [4530890240] Host "[IP] 172.18.86.102 [Port] 0 [Flags] 2 [Guid] 3057201671 [EditorId] 3057201671 [Version] 1048832 [Id] OSXEditor(0,client-172-18-86-102.eduroam.universite-paris-saclay.fr) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [4530890240] Host "[IP] 172.18.86.102 [Port] 0 [Flags] 2 [Guid] 3057201671 [EditorId] 3057201671 [Version] 1048832 [Id] OSXEditor(0,client-172-18-86-102.eduroam.universite-paris-saclay.fr) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+Refreshing native plugins compatible for Editor in 93.00 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.21f1 (1b156197d683)
+[Subsystems] Discovering subsystems at path /Users/kentrachmat/Applications/2021.3.21f1/Unity.app/Contents/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /Users/kentrachmat/Downloads/animations 2/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Color LCD preferred device: Intel(R) Iris(TM) Plus Graphics 655 (low power)
+Metal devices available: 1
+0: Intel(R) Iris(TM) Plus Graphics 655 (low power)
+Using device Intel(R) Iris(TM) Plus Graphics 655 (low power)
+Initializing Metal device caps: Intel(R) Iris(TM) Plus Graphics 655
+Initialize mono
+Mono path[0] = '/Users/kentrachmat/Applications/2021.3.21f1/Unity.app/Contents/Managed'
+Mono path[1] = '/Users/kentrachmat/Applications/2021.3.21f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit-macos'
+Mono config path = '/Users/kentrachmat/Applications/2021.3.21f1/Unity.app/Contents/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56227
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: /Users/kentrachmat/Applications/2021.3.21f1/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: /Users/kentrachmat/Applications/2021.3.21f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Registered in 0.003451 seconds.
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 86.81 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.983 seconds
+Domain Reload Profiling:
+	ReloadAssembly (984ms)
+		BeginReloadAssembly (149ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (695ms)
+			LoadAssemblies (151ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (181ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (56ms)
+			SetupLoadedEditorAssemblies (358ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (9ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (87ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (202ms)
+				ProcessInitializeOnLoadMethodAttributes (58ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.002394 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image /Users/kentrachmat/Downloads/animations 2/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/kentrachmat/Downloads/animations 2/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.59 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.425 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1426ms)
+		BeginReloadAssembly (186ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (9ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (54ms)
+		EndReloadAssembly (1091ms)
+			LoadAssemblies (138ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (406ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (74ms)
+			SetupLoadedEditorAssemblies (437ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (86ms)
+				ProcessInitializeOnLoadAttributes (317ms)
+				ProcessInitializeOnLoadMethodAttributes (25ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launching external process: /Users/kentrachmat/Applications/2021.3.21f1/Unity.app/Contents/Tools/UnityShaderCompiler
+Launched and connected shader compiler UnityShaderCompiler after 0.13 seconds
+Refreshing native plugins compatible for Editor in 0.86 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3047 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 24 unused Assets / (88.6 KB). Loaded Objects now: 3507.
+Memory consumption went from 102.3 MB to 102.2 MB.
+Total: 4.188178 ms (FindLiveObjects: 0.313158 ms CreateObjectMapping: 0.251741 ms MarkObjects: 3.490778 ms  DeleteObjects: 0.131458 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 57179.086829 seconds.
+  path: Assets/Animations
+  artifactKey: Guid(0abbb921a51294eaab39d19533f28ceb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations using Guid(0abbb921a51294eaab39d19533f28ceb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3d1f90c427db0cc82483c4eb1fce38f') in 0.008141 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.037131 seconds.
+  path: Assets/Nervous.fbx
+  artifactKey: Guid(d7ff012268efc4dda8153a30631a708f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Nervous.fbx using Guid(d7ff012268efc4dda8153a30631a708f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0eebc7d237b3181f7d8a4ed8b83b14e5') in 1.087479 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1245.622280 seconds.
+  path: Assets/Nervous.fbx
+  artifactKey: Guid(d7ff012268efc4dda8153a30631a708f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Nervous.fbx using Guid(d7ff012268efc4dda8153a30631a708f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d36d98dee9bfda7cbe039040b993158') in 1.158379 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 482.440197 seconds.
+  path: Assets/mixamo.com.anim
+  artifactKey: Guid(5b0d726c83913465c92d92a3e6330913) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/mixamo.com.anim using Guid(5b0d726c83913465c92d92a3e6330913) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8fb38c9c7104bd2ae1d8f798cc09d472') in 0.193641 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.110951 seconds.
+  path: Assets/Nervous.anim
+  artifactKey: Guid(5b0d726c83913465c92d92a3e6330913) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Nervous.anim using Guid(5b0d726c83913465c92d92a3e6330913) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e619fd2b7114bd4cc3082507920cff6') in 0.014236 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.311860 seconds.
+  path: Assets/Animations/Nervous.anim
+  artifactKey: Guid(5b0d726c83913465c92d92a3e6330913) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Nervous.anim using Guid(5b0d726c83913465c92d92a3e6330913) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f54a4d74b1d74d3abd521477229d0f6b') in 0.009389 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.541066 seconds.
+  path: Assets/Animations/Nervous.controller
+  artifactKey: Guid(46b50c18b840c4e3cad8073b718c2a78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Nervous.controller using Guid(46b50c18b840c4e3cad8073b718c2a78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f70437f7ff4aca3c151658fd2b2c4d4') in 0.154069 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 14.510059 seconds.
+  path: Assets/Animations/Fighting.fbx
+  artifactKey: Guid(bb6f7f2ae8d6142209be76c86cea7425) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Fighting.fbx using Guid(bb6f7f2ae8d6142209be76c86cea7425) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65648a5b36d63f67a09c5c6694e8ff8a') in 0.029204 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000059 seconds.
+  path: Assets/Animations/Walking.fbx
+  artifactKey: Guid(8accffa2037214125bfac72c77b16a1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Walking.fbx using Guid(8accffa2037214125bfac72c77b16a1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f302d3c20f7ec317e430037d600bea6') in 0.015729 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.567631 seconds.
+  path: Assets/Animations/Nervous 1.controller
+  artifactKey: Guid(c6bda4bb1205948f5a8e8d1b5dde91a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Nervous 1.controller using Guid(c6bda4bb1205948f5a8e8d1b5dde91a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21491643ceced38c2924106dad347e04') in 0.014857 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.860328 seconds.
+  path: Assets/Animations/Nervous 2.controller
+  artifactKey: Guid(0f6cd09cb18c44a8c888d04b5659736d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Nervous 2.controller using Guid(0f6cd09cb18c44a8c888d04b5659736d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2344097ac216a194872581ad9ce69bf4') in 0.013186 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.645769 seconds.
+  path: Assets/Animations/Nervous 3.controller
+  artifactKey: Guid(9b651710864ec40db94cdf43fbb17329) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Nervous 3.controller using Guid(9b651710864ec40db94cdf43fbb17329) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7947d1a59cc62a25d864e48bb99d5910') in 0.014605 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.864970 seconds.
+  path: Assets/Animations/Fighting.controller
+  artifactKey: Guid(c6bda4bb1205948f5a8e8d1b5dde91a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Fighting.controller using Guid(c6bda4bb1205948f5a8e8d1b5dde91a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5343daedd3017fb1e715a3ed40cac9e6') in 0.014367 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.192232 seconds.
+  path: Assets/Animations/Thinking.controller
+  artifactKey: Guid(0f6cd09cb18c44a8c888d04b5659736d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Thinking.controller using Guid(0f6cd09cb18c44a8c888d04b5659736d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06446e201fe5c3eef18302805cb3bdd3') in 0.012883 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.094338 seconds.
+  path: Assets/Animations/Walking.controller
+  artifactKey: Guid(9b651710864ec40db94cdf43fbb17329) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Walking.controller using Guid(9b651710864ec40db94cdf43fbb17329) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3406045817f898d7f6350cddd4159375') in 0.012527 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.634957 seconds.
+  path: Assets/Animations/mixamo.com.anim
+  artifactKey: Guid(2bfe72edfbaf040b8a01154ccc380891) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/mixamo.com.anim using Guid(2bfe72edfbaf040b8a01154ccc380891) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a480f2056ee013de3345151832000bf3') in 0.013697 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.988835 seconds.
+  path: Assets/Animations/Fighting.anim
+  artifactKey: Guid(2bfe72edfbaf040b8a01154ccc380891) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Fighting.anim using Guid(2bfe72edfbaf040b8a01154ccc380891) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b213761ed00373d04377b54f9fbb67ea') in 0.013871 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.737171 seconds.
+  path: Assets/Animations/mixamo.com.anim
+  artifactKey: Guid(2834d9c4e15ec482598798475e5c125b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/mixamo.com.anim using Guid(2834d9c4e15ec482598798475e5c125b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c5996c5317d062174b5929c381df2afe') in 0.010723 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.849596 seconds.
+  path: Assets/Animations/Thinking.anim
+  artifactKey: Guid(2834d9c4e15ec482598798475e5c125b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Thinking.anim using Guid(2834d9c4e15ec482598798475e5c125b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a32f946ab8977022b72f03e9ad83832') in 0.012347 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.809998 seconds.
+  path: Assets/Animations/mixamo.com.anim
+  artifactKey: Guid(516bd5ce2d4024774becd7b7907369b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/mixamo.com.anim using Guid(516bd5ce2d4024774becd7b7907369b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '408a20df8abba32c7653e61aeee8613e') in 0.008141 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.271298 seconds.
+  path: Assets/Animations/Walking.anim
+  artifactKey: Guid(516bd5ce2d4024774becd7b7907369b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Walking.anim using Guid(516bd5ce2d4024774becd7b7907369b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '537752496bdae67be26fe98c03dca2f7') in 0.006824 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 38.876550 seconds.
+  path: Assets/Animations/Nervous.controller
+  artifactKey: Guid(46b50c18b840c4e3cad8073b718c2a78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Nervous.controller using Guid(46b50c18b840c4e3cad8073b718c2a78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebd5fdbba3efe844a2e0e5cc7fc1c4b2') in 0.017653 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 517.853877 seconds.
+  path: Assets/Nervous.fbx
+  artifactKey: Guid(d7ff012268efc4dda8153a30631a708f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Nervous.fbx using Guid(d7ff012268efc4dda8153a30631a708f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0226a25449717a3b2053b21a4ba87b2') in 1.142874 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000161 seconds.
+  path: Assets/Remy_Shoes_Diffuse.png
+  artifactKey: Guid(9da0d61a8b0314cd992c8bb993f8b4b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Remy_Shoes_Diffuse.png using Guid(9da0d61a8b0314cd992c8bb993f8b4b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '824230cbee8126b2017332cbb8ed1441') in 0.472269 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000106 seconds.
+  path: Assets/Remy_Top_Normal.png
+  artifactKey: Guid(1aaa160c6fe1543298eecce0c4db2f47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Remy_Top_Normal.png using Guid(1aaa160c6fe1543298eecce0c4db2f47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2bea390923d5e965fdecae2b9a42a8d6') in 0.021245 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000078 seconds.
+  path: Assets/Remy_Hair_Opacity.png
+  artifactKey: Guid(9f2901072f46848fdbbf0e1017268a1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Remy_Hair_Opacity.png using Guid(9f2901072f46848fdbbf0e1017268a1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a5d950ac663d72f3886b2fb1e157fcf') in 0.020791 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000064 seconds.
+  path: Assets/Remy_Top_Gloss.png
+  artifactKey: Guid(2cd799325c4894d37b5ff854d4cb2337) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Remy_Top_Gloss.png using Guid(2cd799325c4894d37b5ff854d4cb2337) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a152cf494e611c2037447984ec042cbc') in 0.013843 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000077 seconds.
+  path: Assets/Remy_Hair_Diffuse.png
+  artifactKey: Guid(c3f9764109f0e467a860b02b361eaee0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Remy_Hair_Diffuse.png using Guid(c3f9764109f0e467a860b02b361eaee0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3de929a1564cda9e1ecc1f397abbfcab') in 0.015258 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000144 seconds.
+  path: Assets/Remy_Shoes_Normal.png
+  artifactKey: Guid(9d37372636f124c689ba72b499770c13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Remy_Shoes_Normal.png using Guid(9d37372636f124c689ba72b499770c13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b3179a5da8c615ac96cea3bfaaddca9') in 0.015296 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000076 seconds.
+  path: Assets/Remy_Top_Diffuse.png
+  artifactKey: Guid(a11b9c3eb71a6401297af468e9b04492) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Remy_Top_Diffuse.png using Guid(a11b9c3eb71a6401297af468e9b04492) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '143623e7242f750ddecf647e2b32c974') in 0.014839 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000070 seconds.
+  path: Assets/Remy_Hair_Gloss.png
+  artifactKey: Guid(164b3e325fd8240d3ab364e149dc3076) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Remy_Hair_Gloss.png using Guid(164b3e325fd8240d3ab364e149dc3076) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5079eefb0e2391736ffc84e386a046d0') in 0.020242 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000108 seconds.
+  path: Assets/Remy_Bottom_Specular.png
+  artifactKey: Guid(ac32641f173a64875b5c39e5f471e5f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Remy_Bottom_Specular.png using Guid(ac32641f173a64875b5c39e5f471e5f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22c0a86e1752301cfbf89eb6dde2ae48') in 0.014182 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000132 seconds.
+  path: Assets/Remy_Body_Specular.png
+  artifactKey: Guid(399ac155ab75140ecbab5ec524f65be9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Remy_Body_Specular.png using Guid(399ac155ab75140ecbab5ec524f65be9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18eb11c178a05e3abae7c64f524b70ae') in 0.019936 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000066 seconds.
+  path: Assets/Remy_Shoes_Specular.png
+  artifactKey: Guid(85ec7bae3508f4d1abc886bdc418acf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Remy_Shoes_Specular.png using Guid(85ec7bae3508f4d1abc886bdc418acf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '002451a366e2555322edac5c7486c367') in 0.015491 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.759839 seconds.
+  path: Assets/Nervous.fbx
+  artifactKey: Guid(d7ff012268efc4dda8153a30631a708f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Nervous.fbx using Guid(d7ff012268efc4dda8153a30631a708f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30fc65efda390893d58187a06cb00778') in 0.152603 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000059 seconds.
+  path: Assets/Remy_Top_Normal.png
+  artifactKey: Guid(1aaa160c6fe1543298eecce0c4db2f47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Remy_Top_Normal.png using Guid(1aaa160c6fe1543298eecce0c4db2f47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8daf08d4ded317bc76e79a172bc8de5d') in 0.363957 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000081 seconds.
+  path: Assets/Remy_Hair_Normal.png
+  artifactKey: Guid(f9ca1f09f418a4f03a0cfc82328eb665) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Remy_Hair_Normal.png using Guid(f9ca1f09f418a4f03a0cfc82328eb665) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '076464227a89fbd5e1c64a995b67f8f1') in 0.014326 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000225 seconds.
+  path: Assets/Remy_Bottom_Normal.png
+  artifactKey: Guid(3ad24f246ae1f41a8aba61ac3b9884b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Remy_Bottom_Normal.png using Guid(3ad24f246ae1f41a8aba61ac3b9884b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a1f6229de05cb3ed04586448f352d64') in 0.019525 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001897 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image /Users/kentrachmat/Downloads/animations 2/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/kentrachmat/Downloads/animations 2/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.89 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.850 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1851ms)
+		BeginReloadAssembly (444ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (13ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (187ms)
+		EndReloadAssembly (1248ms)
+			LoadAssemblies (194ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (534ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (77ms)
+			SetupLoadedEditorAssemblies (463ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (7ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (75ms)
+				ProcessInitializeOnLoadAttributes (346ms)
+				ProcessInitializeOnLoadMethodAttributes (32ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.95 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3042 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 17 unused Assets / (68.4 KB). Loaded Objects now: 3559.
+Memory consumption went from 134.2 MB to 134.1 MB.
+Total: 4.206052 ms (FindLiveObjects: 0.342431 ms CreateObjectMapping: 0.447657 ms MarkObjects: 3.286644 ms  DeleteObjects: 0.128137 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
