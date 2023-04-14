@@ -64,7 +64,7 @@ public static class NavigationManager
 
         if(CurrentNode.LeftNode == null)
         {
-            Debug.Log("End of Decision Tree");
+            NavigationManager.mainController.StartCoroutine(NavigationManager.mainController.CloseGame());
             return;
         }
 
@@ -106,7 +106,10 @@ public static class NavigationManager
             CurrentNode.Content.nameOfPrefab3D = nextTrackingNode.ParentNode.Content.nameOfPrefab3D;
         }
 
-        CurrentNode.Content.UpdateView();
+        if (CurrentNode.IsNodeVisible)
+        {
+            CurrentNode.Content.UpdateView();
+        }
 
         var newMetaDataTracker = CreateNewMetaDataBasedOnThePrev(nextTrackingNode, newTracker);
 
@@ -168,7 +171,7 @@ public static class NavigationManager
 
 public class NodeRenderedContent
 {
-    public NodeRenderedContent(string description = "", string nameOfPrefab3D = "", string nameOfAudioClip = "", string animationToTrigger ="")
+    public NodeRenderedContent(string description = "", string nameOfPrefab3D = "", string nameOfAudioClip = "", string animationToTrigger ="", bool isEndNode = false)
     {
         this.nameOfPrefab3D = nameOfPrefab3D;
         this.description = description;
@@ -178,8 +181,12 @@ public class NodeRenderedContent
             audioClip = Resources.Load<AudioClip>("Audios/" + nameOfAudioClip);
         }
 
+        this.IsEndNode = isEndNode;
+
         this.animatorController = animationToTrigger;
     }
+
+    public bool IsEndNode = false;
 
     public DecisionTreeNode nodeSubject;
 
