@@ -361,28 +361,47 @@ public class DecisionTreeNode
     {
         if (node.ReferredTrackingMetaData == null)
         {
+            Debug.LogError("ReferredTrackingMetaData null in setting visib to "+ isVisibile+" for node: "+ node.Content.description);
             node.IsNodeVisible = false;
             return;
         }
-        else
-        {
-            if (node.ReferredTrackingMetaData.Tracker == target)
-            {
-                if(node.IsNodeVisible != isVisibile && node == NavigationManager.CurrentNode)
-                {
-                    if (isVisibile)
-                    {
-                        node.Content.ResumeItsAudio();
-                    }
-                    else
-                    {
-                        node.Content.PauseAudio();
-                    }
 
+
+
+        if (node.ReferredTrackingMetaData.Tracker == target)
+        {
+            if(node.IsNodeVisible != isVisibile && node == NavigationManager.CurrentNode)
+            {
+                if (isVisibile)
+                {
+                    node.Content.ResumeItsAudio();
                 }
-                node.IsNodeVisible = isVisibile;
+                else
+                {
+                    node.Content.PauseAudio();
+                    Debug.LogError("Paused audio");
+                }
+
             }
+            else if(node != NavigationManager.CurrentNode)
+            {
+                Debug.LogError("node != NavigationManagea.CurrentNod in setting visib to " + isVisibile + " for node: " + node.Content.description);
+            }
+            node.IsNodeVisible = isVisibile;
         }
+
+        /*
+        if(node == NavigationManager.CurrentNode)
+        {
+            if(node.RequireUserInteraction == true)
+            {
+                node.LeftNode.IsNodeVisible = isVisibile;
+                node.RightNode.IsNodeVisible = isVisibile;
+            }
+
+            return;
+        }
+        */
 
         if(node.LeftNode != null)
         {
@@ -566,10 +585,15 @@ public class DecisionTreeNode
 
                 if(lastCounter != NavigationManager.mainController.counterOfUpdates && IsNodeVisible == true)
                 {
-                    lastCounter = NavigationManager.mainController.counterOfUpdates;
+                    if(NavigationManager.mainController.counterOfUpdates > lastCounter)
+                    {
+                        var steps = NavigationManager.mainController.counterOfUpdates - lastCounter;
 
-                    millisecOfVisibility-= 10;
+                        millisecOfVisibility -= (10* steps);
+                    }
                 }
+
+                lastCounter = NavigationManager.mainController.counterOfUpdates;
 
                 return true;
             }
