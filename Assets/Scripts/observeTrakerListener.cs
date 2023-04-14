@@ -6,14 +6,24 @@ public class observeTrakerListener : MonoBehaviour
 {
     public MainController mainController;
 
+    public GameObject traker;
+
 
     public void OnTrackerVisible()
     {
-        mainController.OnTragetFound(gameObject);
+        Debug.LogError("on Tracker found");
+        if(mainController.isInitialized == true)
+        {
+            mainController.OnTragetFound(traker);
+        }
     }
 
     public void OnTrackerLost()
     {
-        mainController.OnTargetLost(gameObject);
+        Debug.LogError("on Tracker lost");
+        if (mainController.isInitialized == true)
+        {
+            mainController.OnTargetLost(traker);
+        }
     }
 }
